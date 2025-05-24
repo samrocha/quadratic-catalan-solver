@@ -12,6 +12,8 @@ import pytest
 import math
 from typing import List
 
+from quadratic_catalan_solver import CatalanSolver, QuadraticEquation
+
 # Import classes from main module
 # from quadratic_solver import QuadraticEquation, CatalanSolver, Solution
 
