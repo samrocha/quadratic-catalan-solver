@@ -27,8 +27,8 @@ quadratic-catalan-solver/
 ├── README.md                        # Main documentation
 ├── requirements.txt                 # Python dependencies
 ├── setup.py                         # Package setup (optional)
-├── quadratic_solver.py              # Main solver module
-├── test_quadratic_solver.py         # Comprehensive test suite
+├── quadratic_catalan_solver.py      # Main solver module
+├── test_quadratic_catalan_solver.py # Comprehensive test suite
 └── usage_examples.py                # Usage examples and demonstrations
 ```
 
@@ -36,8 +36,8 @@ quadratic-catalan-solver/
 
 ### Core Files
 
-- **`quadratic_solver.py`**: Main module containing all solver classes and logic
-- **`test_quadratic_solver.py`**: Comprehensive unit test suite
+- **`quadratic_catalan_solver.py`**: Main module containing all solver classes and logic
+- **`test_quadratic_catalan_solver.py`**: Comprehensive unit test suite
 - **`usage_examples.py`**: Practical examples and demonstrations
 - **`README.md`**: Complete project documentation
 
@@ -176,7 +176,7 @@ pytest test_quadratic_solver.py -v
 
 ### Basic Usage
 ```python
-from quadratic_solver import QuadraticEquation, CatalanSolver
+from quadratic_catalan_solver import QuadraticEquation, CatalanSolver
 
 solver = CatalanSolver()
 eq = QuadraticEquation(1, 4, 1)

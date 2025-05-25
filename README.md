@@ -1,22 +1,24 @@
 # Quadratic Equation Solver with Catalan Numbers
 
-An advanced quadratic equation solver that implements an alternative method using Catalan number series, offering unique mathematical insights and high precision.
+An alternative quadratic equation solver that uses Catalan number series. Inspired by the paper:
+
+Wildberger, N. J., & Rubine, D. (2025). A Hyper-Catalan Series Solution to Polynomial Equations, and the Geode. The American Mathematical Monthly, 132(5), 383–402. [https://doi.org/10.1080/00029890.2025.2460966](https://doi.org/10.1080/00029890.2025.2460966)
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Catalan Numbers Method](#catalan-numbers-method)
-- [API Documentation](#api-documentation)
-- [Advanced Examples](#advanced-examples)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
+- [Overview](#-overview)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Catalan Numbers Method](#-catalan-numbers-method)
+- [API Documentation](#-api-documentation)
+- [Advanced Examples](#-advanced-examples)
+- [Testing](#-testing)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ## 🎯 Overview
 
-This project implements an innovative method for solving quadratic equations of the form `ax² + bx + c = 0` using infinite series based on **Catalan numbers**. 
+This project implements an innovative method for solving quadratic equations of the form `ax² + bx + c = 0` using infinite series based on **Catalan numbers**.
 
 ### Key Features
 
@@ -32,6 +34,7 @@ This project implements an innovative method for solving quadratic equations of 
 Catalan numbers form the sequence: **1, 1, 2, 5, 14, 42, 132, 429, ...**
 
 They appear in various combinatorial problems:
+
 - Ways to parenthesize expressions
 - Grid paths that don't cross diagonals
 - Binary trees
@@ -50,21 +53,21 @@ pip install matplotlib
 
 # For testing (optional)
 pip install pytest
-```
+```text
 
 ### Direct Usage
 
 ```python
 # Copy project files
-# quadratic_solver.py - Main module
+# quadratic_catalan_solver.py - Main module
 # usage_examples.py - Usage examples
-# test_quadratic_solver.py - Unit tests
+# test_quadratic_catalan_solver.py - Unit tests
 ```
 
 ## ⚡ Quick Start
 
 ```python
-from quadratic_solver import QuadraticEquation, CatalanSolver
+from quadratic_catalan_solver import QuadraticEquation, CatalanSolver
 
 # Create solver
 solver = CatalanSolver(tolerance=1e-10)
@@ -85,6 +88,7 @@ if solution.terms_used:
 ### Applicability Conditions
 
 The method is applied when:
+
 - `|A| ≤ 1/4`, where `A = ac/b²`
 - All coefficients are non-zero
 - The equation is genuinely quadratic
@@ -122,6 +126,7 @@ QuadraticEquation(a: float, b: float, c: float)
 ```
 
 **Parameters:**
+
 - `a`: Coefficient of x²
 - `b`: Coefficient of x
 - `c`: Constant term
@@ -141,10 +146,12 @@ CatalanSolver(tolerance: float = 1e-10)
 Solves the equation using the most appropriate method.
 
 **Parameters:**
+
 - `equation`: Instance of `QuadraticEquation`
 - `verbose`: If True, shows process details
 
 **Returns:** `Solution` object with:
+
 - `roots`: List of found roots
 - `method_used`: Method used
 - `terms_used`: Number of terms (if applicable)
@@ -155,6 +162,7 @@ Solves the equation using the most appropriate method.
 Calculates the nth Catalan number.
 
 **Parameters:**
+
 - `n`: Index (n ≥ 0)
 
 **Returns:** Catalan number C(n)
@@ -287,12 +295,14 @@ def test_catalan_method_favorable_case(self, solver):
 ### When to Use Each Method
 
 **Use Catalan Method when:**
+
 - `|A| ≤ 1/4` (necessary condition)
 - Controlled precision is important
 - Educational/mathematical analysis
 - Avoiding numerical issues with small discriminants
 
 **Use Standard Method when:**
+
 - `|A| > 1/4`
 - Maximum performance is priority
 - Simple implementation is sufficient
@@ -302,6 +312,7 @@ def test_catalan_method_favorable_case(self, solver):
 ### Mathematical Connections
 
 This project illustrates connections between:
+
 - **Algebra**: Quadratic equations
 - **Combinatorics**: Catalan numbers
 - **Analysis**: Infinite series
@@ -318,7 +329,7 @@ This project illustrates connections between:
 
 ### File Organization
 
-```
+``` text
 quadratic_catalan_solver/
 ├── quadratic_solver.py      # Main module
 ├── test_quadratic_solver.py # Unit tests
@@ -376,10 +387,11 @@ This project is distributed under the MIT License. See the `LICENSE` file for de
 ## 📞 Support
 
 For questions, suggestions, or issues:
+
 - Open an **Issue** in the repository
 - Consult the **complete documentation**
 - Run the provided **examples**
 
 ---
 
-**Developed with ❤️ to demonstrate the beauty of computational mathematics*
+### Developed with ❤️ to demonstrate the beauty of computational mathematics

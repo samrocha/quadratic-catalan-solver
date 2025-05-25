@@ -4,9 +4,6 @@ Usage Examples for Quadratic Equation Solver
 
 This file demonstrates how to use the quadratic equation solver
 with Catalan numbers efficiently and following best practices.
-
-Author: Claude AI System
-Date: May 2025
 """
 
 import sys
@@ -14,8 +11,8 @@ from typing import List
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Import classes from main module (uncomment when using)
-# from quadratic_solver import QuadraticEquation, CatalanSolver, Solution
+# Import classes from main module
+from quadratic_catalan_solver import QuadraticEquation, CatalanSolver, Solution
 
 
 def basic_usage_example():
